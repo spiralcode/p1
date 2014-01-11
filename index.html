@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="07/01/2014" name="Page Development Started">
+<meta content="ViswaKarma Wood Works Cherthala." name="description">
+<meta charset="utf-8">
+<title>ViswaKarma Wood Works,Cherthala</title>
+<script type="application/javascript" language="javascript">
+var init=0;
+var sel='home';
+var loaded='load';
+function loader (l,id)
+{
+	document.getElementById('contentframe').src=l;
+	if(sel!=id)
+	{
+	document.getElementById(id).style.color='#BCCC8D';
+	document.getElementById(sel).style.color='#FFFFFF';
+	}
+	else
+	{
+		document.getElementById('home').style.color='#BCCC8D';
+	}
+	sel=id;
+}
+function fade(ob,s)
+{
+var obj = ob;
+	if(s!=1)
+	{
+var op=2;
+var ttt=setInterval(function(){
+document.getElementById(obj).style.opacity=op;
+op=op-0.1;
+if(op<0)
+{
+	document.getElementById(obj).style.display='none';
+	clearInterval(ttt);
+}
+		},1);
+	}
+else
+{
+var op=0;
+var ttt=setInterval(function(){
+document.getElementById(obj).style.opacity=op;
+op=op+0.1;
+if(op>2)
+{
+	clearInterval(ttt);
+	document.getElementById(obj).style.display='block';
+
+}
+		},1);
+	}
+}
+function sw()
+{
+	if(init==0)
+	{
+		fade('content');
+		init=1;
+		document.getElementById('hid').style.display='block';
+	}
+	else
+	{
+				fade('content',1);
+				init=0;
+				document.getElementById('hid').style.display='none';
+
+	}
+
+	
+}
+function hide()
+{
+	document.getElementById('overlay').style.display='none';
+	align(800,600,'pic');
+	document.getElementById('pic').style.display='none';
+	
+
+}
+function picshow(w,h,l)
+{
+	document.getElementById('overlay').style.display='block';
+	document.getElementById('pic').innerHTML='<img title="Loading..." src = "'+l+'"/>';
+	align(w,h,'pic');
+	document.getElementById('pic').style.display='block';
+	
+}
+function align(iw,ih,ob)
+{
+var w = window.innerWidth;
+var h = window.innerHeight;
+document.getElementById(ob).style.width=iw+'px';
+document.getElementById(ob).style.height=ih+'px';
+var wl=(w/2)-(iw/2);
+var hl=(h/2)-(ih/2);
+document.getElementById(ob).style.left=wl+'px';
+document.getElementById(ob).style.top=hl+'px';
+}
+function prevent()
+{
+	document.getElementsByTagName('body').style.outline='none';
+}
+function sizeshift()
+{
+	var w=window.innerWidth;
+	var h=window.innerHeight;
+	var bh=(10/100)*h;
+	var optsize = (35/100)*bh;
+	var bannerfont = (60/100)*bh;
+	document.getElementById('headbanner').style.height=bh+'px';
+	document.getElementById('banner-options').style.fontSize=optsize+'px';
+	document.getElementById('banner-title').style.fontSize=bannerfont+'px';
+}
+</script>
+<style>
+.banner
+{
+	position:fixed;
+	width:101%;
+	height:10%;
+	background-color:#09F;
+	left:-1px;
+	right:-1px;
+	top:-1px;
+	background:url(img/banner-cropped.jpg);
+	background-size:cover;
+	background-attachment:fixed;
+	box-shadow: 0px 10px 30px #663300;
+	z-index:99;
+}
+.banner-title
+{
+	position:absolute;
+	font-family:"Segoe UI Light", Arial;
+	font-size:35px;
+	color:#FFF;
+}
+.banner-options
+{
+	position:absolute;
+	font-family:"Segoe UI Light", Arial;
+	right:2%;
+	top:30%;
+	font-size:30px;
+
+}
+.banner-opt
+{
+	position:relative;
+	font-family:"Segoe UI Light", Arial;
+	color:#FFF;
+	margin:10px;
+	cursor:pointer;
+
+}
+.banner-opt:hover
+{
+	color:#462828;
+}
+.content
+{
+	position:fixed;
+	top:10%;
+	width:80%;
+	height:90%;
+	left:10%;
+	right:10%;
+	box-shadow:-1px 1px 30px #663300;
+}
+.back
+{
+	position:fixed;
+	opacity:.8;
+	left:0px;
+	width:100%;
+	height:90%;
+	top:10%;
+	background-size:cover;}
+.body
+{
+}
+::-webkit-scrollbar {
+width: 12px;
+}
+ 
+::-webkit-scrollbar-track {
+-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+border-radius: 50px;
+}
+ 
+::-webkit-scrollbar-thumb {
+border-radius: 1000px;
+-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}/* CSS Document */
+
+.masthead
+{
+	position:absolute;
+	bottom:1px;
+	margin:10px;
+	cursor:pointer;
+}
+.infohidden
+{
+	position:absolute;
+	top:40%;
+	left:40%;
+	font-family:"Segoe UI Light", Arial;
+	font-size:24px;
+	display:none;
+	
+}
+.overlay
+{
+	position:fixed;
+	width:100%;
+	height:100%;
+	background-color:#666;
+	top:0px;
+	left:0px;
+	z-index:9999;
+	opacity:.9;
+	display:none;
+}
+.pic
+{
+	position:absolute;
+	z-index:10000;
+	display:none;
+}
+.options
+{
+	position:absolute;
+	bottom:1px;
+	right:1%;
+	margin:1%;
+	cursor:pointer;
+	opacity:.8;
+}
+.options:hover
+{
+	opacity:1;
+}
+.mapimg
+{
+	height:64px;
+	width:64px;
+}
+.mapimg:hover
+{
+	width:70px;
+	height:70px;
+}
+</style>
+
+</head>
+
+<body onload="fade('banner-title',1),sizeshift();" class="body" onresize="sizeshift();">
+<div class="banner" id="headbanner"><div class="banner-title" id="banner-title">ViswaKarma Woods</div><div class="banner-options" id="banner-options"><span style="color:#BCCC8D;" id="home" title="Homepage" class="banner-opt" onclick="loader ('welcome.html','home');">Home</span><span id="gallery" title="View the Gallery" class="banner-opt" onclick="loader('products.html','gallery');">Gallery</span><span id="about" onclick="loader('about.htm','about');" class="banner-opt" title="Read about us">History</span><span onclick="loader('contact.html','contact');" id="contact" class="banner-opt" title="How to contact us">Contact</span></div></div><div class="back"><div class="infohidden" id="hid">&copy; of ViswaKarma Woods 2000</div><div class="masthead" title="Click to know about the ownership details of this page."><span onclick="sw();" ><img src="img/info.png"/></span></div><div class="options"><span onclick="loader('http://wikimapia.org/#lang=en&lat=9.686637&lon=76.343530&z=19&m=m');" title="Locate us on Google Maps"><img alt="Locate us on Google Maps" src="img/map.png" class="mapimg"/></span></div></div><div class="content" id="content"><iframe style="position:absolute;width:100%; height:100%;" frameborder="0" id="contentframe" src="welcome.html"></iframe></div><div id="overlay" class="overlay" onclick="hide();"></div><div class="pic" id="pic"><img alt="Loading..." src="img/about.jpg"/></div>
+</body>
+</html>

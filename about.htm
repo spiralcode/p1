@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>About Us</title>
+<script>
+var init=17;
+function fontsizer(i)
+{
+	if(i=='i')
+	{
+		init++;
+document.getElementById('pagecontents').style.fontSize=init+'px';
+	}
+	if(i=='d')
+	{
+	init--;
+document.getElementById('pagecontents').style.fontSize=init+'px';	
+	}
+	if(i=='n')
+	{
+		document.getElementById('pagecontents').style.fontSize='17px';
+		init=17;
+	}
+		
+}
+</script>
+<style>
+.pagetitle
+{
+	font-family:"Segoe UI Light", Arial;
+	color:#03F;
+}
+.pagecontents
+{
+	font-family:"Segoe UI Light", Arial;
+	color:#fff;
+	font-size:17px;
+
+}
+.body
+{
+	background:url(img/strip.png);
+	background-attachment:fixed;
+}
+.pageopt
+{
+	position:fixed;
+	font-family:"Segoe UI Light", Arial;
+	font-size:20px;
+	right:5%;
+	margin-right:2%;
+	border:thin 2px #333333;
+	width:10px;
+	height:5px;
+	background-attachment:fixed;
+	top:10px;
+}
+.pageopt-opt
+{
+	position:relative;
+	cursor:pointer;
+	margin:1%;
+	background-color:#999;
+}
+.pageopt-opt:hover
+{
+	color:#C63;
+}
+</style>
+</head>
+
+<body class="body">
+<div class="pageopt"><span class="pageopt-opt" onclick="fontsizer('i');" title="Increase the font Size">F+</span>&nbsp;&nbsp;<span class="pageopt-opt" onclick="fontsizer('n');" title="Orginal font size">N</span>&nbsp;&nbsp;<span class="pageopt-opt" onclick="fontsizer('d');" title="Decrease the font Size">F-</span>&nbsp;&nbsp;</div>
+<h1 class="pagetitle">About Us</h1>
+<p class="pagecontents" id="pagecontents">At Viswakarma Wood Craft we are unique in that we can offer you a full joinery package for your home. We take time with our clients to design each individual product to your personal taste & specification.
+Viswakarma Wood Craft are based in Cherthala – just 2.3 kms from KSRTC Stand Cherthala. We supply and fit high quality joinery products for all aspects of your home. We manufacture everything from entrance frames, doors and patio doors to sliding sash windows, traditional cutstring stairscases, internal doorsets to luxury kitchens and fitted bedroom furniture.
+We are proud of our product which is rooted in craftsmanship and is produced by highly qualified professionals using the latest cutting edge technology.
+We supply to a wide range of local clients in Alappuzha and Ernakulam. Our client base includes homeowners, builders, construction companies, architects, designers and schools.
+At Viswakarma Wood Craft we are unique in that we can offer you a full joinery package for your home. We take time with our clients to design each individual product to your personal taste & specification.
+Viswakarma Wood Craft are based in Cherthala – just 2.3 kms from KSRTC Stand Cherthala. We supply and fit high quality joinery products for all aspects of your home. We manufacture everything from entrance frames, doors and patio doors to sliding sash windows, traditional cutstring stairscases, internal doorsets to luxury kitchens and fitted bedroom furniture.
+We are proud of our product which is rooted in craftsmanship and is produced by highly qualified professionals using the latest cutting edge technology.
+We supply to a wide range of local clients in Alappuzha and Ernakulam. Our client base includes homeowners, builders, construction companies, architects, designers and schools.
+</p>
+</body>
+</html>

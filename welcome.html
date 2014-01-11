@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>About Us</title>
+<style>
+.pagetitle
+{
+	font-family:"Segoe UI Light", Arial;
+	color:#03F;
+}
+.pagecontents
+{
+	font-family:"Segoe UI Light", Arial;
+	color:#fff;
+	background:url(img/text.png);
+}
+.body
+{
+	background:url(img/welcome.png);
+	background-attachment:fixed;
+	background-size:cover;
+}
+</style>
+<script>
+function fade(ob,s)
+{
+const obj = ob;
+
+var op=0;
+var ttt=setInterval(function(){
+document.getElementById(obj).style.opacity=op;
+op=op+0.01;
+if(op>2)
+{
+	clearInterval(ttt);
+	document.getElementById(obj).style.display='block';
+
+}
+		},1);
+}
+
+</script>
+</head>
+
+<body class="body">
+<h1 class="pagetitle" id="pagetitle">Welcome</h1>
+<p class="pagecontents">This is a home furnishings store in Cherthala that offers quality, real wood furniture customized just for you. We have offer various styles of furniture. Our firm was started in 1974 in Manorama jn. , Cherthala. 
+
+Our mission. To be the best “Real Wood” furniture option for customers, allowing them to CREATE the look they want to match their style. To be known for quality while offering affordable furniture where the customer can dictate size, style, wood type, & finishing choices.
+
+Our invitation. So, we invite you. What specific home furnishings can we take care of for you? We honestly do it all. We offer storage solutions for laundry or mud rooms. We offer beautiful, creative options for your entryway. We have a full kitchen and bath cabinetry collection. We have everything you need for your living room or theater room as little as that skinny end table to fit your space, to that perfect and fully functional television stand, and we go as far as creating a complete built in look. We have everything you need for your home office - file cabinets, custom desks, bookcases, and more! We have kid’s furniture. We have many options for bedroom furniture - nightstands, chests, dressers, storage beds, and more. We are confident that we can serve you in your home furnishing needs and we look forward to working for you.
+
+</p>
+
+</body>
+</html>
