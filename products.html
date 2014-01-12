@@ -3,7 +3,50 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Products</title>
+<script>
+function picshow(w,h,l,t)
+{
+	document.getElementById('overlay').style.display='block';
+	document.getElementById('picc').style.display='block';
+	if(t!=undefined)
+	{
+		document.getElementById('picc').innerHTML=t;
+	}
+	else
+	{
+		document.getElementById('picc').innerHTML='Pic';
+	}
+	document.getElementById('pic').innerHTML='<img title="Loading..." src = "'+l+'"/>';
+	align(w,h,'pic');
+	document.getElementById('pic').style.display='block';
+	if(window.innerHeight<h||window.innerWidth<w)
+	{
+	document.getElementById('fulllink').style.display='block';
+	document.getElementById('fulllink').href=l;
+	}
+	
+}
+function hide()
+{
+	document.getElementById('overlay').style.display='none';
+	align(800,600,'pic');
+	document.getElementById('pic').style.display='none';
+	document.getElementById('picc').style.display='none';
+}
+function align(iw,ih,ob)
+{
+var w = window.innerWidth;
+var h = window.innerHeight;
+document.getElementById(ob).style.width=iw+'px';
+document.getElementById(ob).style.height=ih+'px';
+var wl=(w/2)-(iw/2);
+var hl=(h/2)-(ih/2);
+document.getElementById(ob).style.left=wl+'px';
+document.getElementById(ob).style.top=hl+'px';
+}
+</script>
 <style>
+
 .pagetitle
 {
 	font-family:"Segoe UI Light", Arial;
@@ -21,11 +64,65 @@
 	background-attachment:fixed;
 	background-size:cover;
 }
+.img
+{
+	width:200px;
+	height:180px;
+	opacity:.9;
+	cursor:pointer;
+}
+.img:hover
+{
+	width:201px;
+	height:181px;
+	opacity:1;
+	box-shadow:2px 6px 12px #663300;
+}
+.overlay
+{
+	position:fixed;
+	width:100%;
+	height:100%;
+	background-color:#666;
+	top:0px;
+	left:0px;
+	z-index:9999;
+	opacity:.9;
+	display:none;
+}
+.pic
+{
+	position:absolute;
+	z-index:10000;
+	display:none;
+}
+.picoptions
+{
+	position:absolute;
+	width:100%;
+	height:20px;
+	background-color:#999;
+	top:5px;
+	font-family:"Segoe UI Light", Arial;
+	font-size:16px;
+	color:#C6F;
+	z-index:99999;
+}
+.picinfo
+{
+	position:absolute;
+	font-family:"Segoe UI Light", Arial;
+	color:#FFF;
+	z-index:45454545;
+	display:none;
+	font-size:50px;
+}
 </style>
 </head>
 
 <body>
 <h1 class="pagetitle">Products</h1>
 <p class="pagecontents">We features many types of furniturings</p>
-</body>
+<h2 class="pagetitle">Images</h2>
+<center><table cellspacing="10px;"><tr><td><img class="img" onclick="picshow(800,450,'gallery/1.jpg','Cochin Port');" src="gallery/1.jpg"></td><td><img class="img" src="gallery/2.jpg"onclick="picshow(800,450,'gallery/2.jpg','Flower Focused');"></td><td><img class="img" src="gallery/3.jpg"onclick="picshow(800,450,'gallery/3.jpg','Flow');"></td></tr><tr><td><img class="img" src="gallery/4.jpg"onclick="picshow(800,450,'gallery/4.jpg','bridge start');"></td></tr></table></center><div onclick="hide();" class="overlay" id="overlay"><span class="picoptions"><a style="display:none;" href="" target="new" id="fulllink">Full Size</a></span></div><span id="picc" class="picinfo">Some</span><span id="pic" class="pic" ></span></span></body>
 </html>

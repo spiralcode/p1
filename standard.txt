@@ -1,0 +1,3 @@
+products.html
+
+Standard image size to be supported : 800X450px
