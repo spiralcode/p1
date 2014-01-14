@@ -78,8 +78,6 @@ function hide()
 	document.getElementById('overlay').style.display='none';
 	align(800,600,'pic');
 	document.getElementById('pic').style.display='none';
-	
-
 }
 function picshow(w,h,l)
 {
@@ -123,6 +121,8 @@ function sizeshift()
 		document.getElementById('banner-title').style.display='block';
 
 	}
+	document.getElementById('options').style.top=h/2-64+'px';
+
 }
 </script>
 <noscript>
@@ -137,15 +137,16 @@ function sizeshift()
 	position:fixed;
 	width:101%;
 	height:10%;
-	background-color:#09F;
 	left:-1px;
 	right:-1px;
 	top:-1px;
-	background:url(img/banner-cropped.jpg);
 	background-size:cover;
 	background-attachment:fixed;
 	box-shadow: 0px 10px 30px #663300;
 	z-index:99;
+}
+.banner:hover
+{	
 }
 .banner-title
 {
@@ -164,6 +165,7 @@ function sizeshift()
 	text-shadow:2px 2px 4px #663300;
 
 }
+
 .banner-opt
 {
 	position:relative;
@@ -172,6 +174,10 @@ function sizeshift()
 	margin:10px;
 	cursor:pointer;
 
+}
+.banner-opt:hover
+{
+	color:#D0FB7B;
 }
 .banner-opt:hover
 {
@@ -193,10 +199,10 @@ function sizeshift()
 	opacity:.8;
 	left:0px;
 	width:100%;
-	height:90%;
+	height:100%;
 	background:url(img/back_new.jpg);
 	background-size:contain;
-	top:10%;
+	top:0px;
 	background-size:cover;}
 .body
 {
@@ -253,15 +259,18 @@ border-radius: 1000px;
 .options
 {
 	position:absolute;
-	bottom:1px;
-	right:1%;
-	margin:1%;
+	bottom:2%;
+	right:-2px;
+	margin:0%;
 	cursor:pointer;
 	opacity:.8;
+	width:69px;
+	height:69px;
 }
 .options:hover
 {
 	opacity:1;
+
 }
 .mapimg
 {
@@ -273,11 +282,12 @@ border-radius: 1000px;
 	width:70px;
 	height:70px;
 }
+
 </style>
 
 </head>
 
 <body onload="fade('banner-title',1),sizeshift();" class="body" onresize="sizeshift();">
-<div class="banner" id="headbanner"><div class="banner-title" id="banner-title">ViswaKarma Woods</div><div class="banner-options" id="banner-options"><span style="color:#BCCC8D;" id="home" title="Homepage" class="banner-opt" onclick="loader ('welcome.html','home');">Home</span><span id="gallery" title="View the Gallery" class="banner-opt" onclick="loader('products.html','gallery');">Gallery</span><span id="about" onclick="loader('about.htm','about');" class="banner-opt" title="Read about us">History</span><span onclick="loader('contact.html','contact');" id="contact" class="banner-opt" title="How to contact us">Contact</span></div></div><div class="back"><div class="infohidden" id="hid">&copy; of ViswaKarma Woods 2000</div><div class="masthead" title="Click to know about the ownership details of this page."><span onclick="sw();" ><img src="img/info.png"/></span></div><div class="options"><span onclick="loader('http://wikimapia.org/#lang=en&lat=9.686637&lon=76.343530&z=19&m=m','map');" id="map" title="Locate us on Google Maps"><img alt="Locate us on Google Maps" src="img/map.png" class="mapimg"/></span></div></div><div class="content" id="content"><iframe style="position:absolute;width:100%; height:100%;" frameborder="0" id="contentframe" src="welcome.html"></iframe></div><div id="overlay" class="overlay" onclick="hide();"></div><div class="pic" id="pic"><img alt="Loading..." src="img/about.jpg"/></div>
+<div class="banner" id="headbanner"><div class="banner-title" id="banner-title">ViswaKarma Woods</div><div class="banner-options" id="banner-options"><span style="color:#BCCC8D;" id="home" title="Homepage" class="banner-opt" onclick="loader ('welcome.html','home');">Home</span><span id="gallery" title="View the Gallery" class="banner-opt" onclick="loader('products.html','gallery');">Gallery</span><span id="about" onclick="loader('about.htm','about');" class="banner-opt" title="Read about us">History</span><span onclick="loader('contact.html','contact');" id="contact" class="banner-opt" title="How to contact us">Contact</span></div></div><div class="back"><div class="infohidden" id="hid">&copy; of ViswaKarma Woods 2000</div><div class="masthead" title="Click to know about the ownership details of this page."><span onclick="sw();" ><img src="img/info.png"/></span></div><div class="options" id="options"><span onclick="loader('http://wikimapia.org/#lang=en&lat=9.686637&lon=76.343530&z=19&m=m','map');" id="map" title="Locate us on Google Maps"><img alt="Locate us on Google Maps" src="img/map.png" class="mapimg"/></span></div></div><div class="content" id="content"><iframe style="position:absolute;width:100%; height:100%;" frameborder="0" id="contentframe" src="welcome.html"></iframe></div><div id="overlay" class="overlay" onclick="hide();"></div><div class="pic" id="pic"><img alt="Loading..." src="img/about.jpg"/></div>
 </body>
 </html>
