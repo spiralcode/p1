@@ -4,6 +4,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta content="07/01/2014" name="Page Development Started">
 <meta content="ViswaKarma Wood Works Cherthala." name="description">
+<meta content="https://www.github.com/rajkrishnanr/p1" name="Version Repo">
+<meta name="keywords" content="Viswakarma wood works, cherthala, alappuzha, wood crafts, crafts,9.698080,76.331677, wood,:-P,:P tree, plant, biology, textbook, sawmill, shed, project, jude, james, tree cut, deforestation, chair, divan-coat, furniture, divan, travancore, achary, yellow, shop, sit, sleep, bed, double-bed, single-bed">
 <meta charset="utf-8">
 <link rel="prerender" href="about.htm"/>
 <link rel="prerender" href="contact.html"/>
@@ -24,37 +26,7 @@ function loader (l,id)
 	}
 	sel=id;
 }
-function fade(ob,s)
-{
-var obj = ob;
-	if(s!=1)
-	{
-var op=2;
-var ttt=setInterval(function(){
-document.getElementById(obj).style.opacity=op;
-op=op-0.1;
-if(op<0)
-{
-	document.getElementById(obj).style.display='none';
-	clearInterval(ttt);
-}
-		},1);
-	}
-else
-{
-var op=0;
-var ttt=setInterval(function(){
-document.getElementById(obj).style.opacity=op;
-op=op+0.1;
-if(op>2)
-{
-	clearInterval(ttt);
-	document.getElementById(obj).style.display='block';
-
-}
-		},1);
-	}
-}
+function fade(ob,s){var obj = ob;if(s!=1){var op=2;var ttt=setInterval(function(){document.getElementById(obj).style.opacity=op;op=op-0.1;if(op<0){document.getElementById(obj).style.display='none';clearInterval(ttt);}},1);}else{var op=0;var ttt=setInterval(function(){document.getElementById(obj).style.opacity=op;op=op+0.1;if(op>2){clearInterval(ttt);document.getElementById(obj).style.display='block';}},1);}}
 function sw()
 {
 	if(init==0)
@@ -112,7 +84,7 @@ function sizeshift()
 	document.getElementById('headbanner').style.height=bh+'px';
 	document.getElementById('banner-options').style.fontSize=optsize+'px';
 	document.getElementById('banner-title').style.fontSize=bannerfont+'px';
-	if(w<300)
+	if(w<400)
 	{
 		document.getElementById('banner-title').style.display='none';
 	}
@@ -227,6 +199,8 @@ border-radius: 1000px;
 	bottom:1px;
 	margin:10px;
 	cursor:pointer;
+	font-size:20px;
+	font-family:Arial, Helvetica, sans-serif;
 }
 .infohidden
 {
@@ -288,6 +262,6 @@ border-radius: 1000px;
 </head>
 
 <body onload="fade('banner-title',1),sizeshift();" class="body" onresize="sizeshift();">
-<div class="banner" id="headbanner"><div class="banner-title" id="banner-title">ViswaKarma Woods</div><div class="banner-options" id="banner-options"><span style="color:#BCCC8D;" id="home" title="Homepage" class="banner-opt" onclick="loader ('welcome.html','home');">Home</span><span id="gallery" title="View the Gallery" class="banner-opt" onclick="loader('products.html','gallery');">Gallery</span><span id="about" onclick="loader('about.htm','about');" class="banner-opt" title="Read about us">History</span><span onclick="loader('contact.html','contact');" id="contact" class="banner-opt" title="How to contact us">Contact</span></div></div><div class="back"><div class="infohidden" id="hid">&copy; of ViswaKarma Woods 2000</div><div class="masthead" title="Click to know about the ownership details of this page."><span onclick="sw();" ><img src="img/info.png"/></span></div><div class="options" id="options"><span onclick="loader('http://wikimapia.org/#lang=en&lat=9.698080&lon=76.331677&z=19&m=m','map');" id="map" title="Locate us on Google Maps"><img alt="Locate us on Google Maps" src="img/map.png" class="mapimg"/></span></div></div><div class="content" id="content"><iframe style="position:absolute;width:100%; height:100%;" frameborder="0" id="contentframe" src="welcome.html"></iframe></div><div id="overlay" class="overlay" onclick="hide();"></div><div class="pic" id="pic"><img alt="Loading..." src="img/about.jpg"/></div>
+<div class="banner" id="headbanner"><div class="banner-title" id="banner-title">ViswaKarma Woods</div><div class="banner-options" id="banner-options"><span style="color:#BCCC8D;" id="home" title="Homepage" class="banner-opt" onclick="loader ('welcome.html','home');">Home</span><span id="gallery" title="View the Gallery" class="banner-opt" onclick="loader('products.html','gallery');">Gallery</span><span id="about" onclick="loader('about.htm','about');" class="banner-opt" title="Read about us">History</span><span onclick="loader('contact.html','contact');" id="contact" class="banner-opt" title="How to contact us">Contact</span></div></div><div class="back"><div class="infohidden" id="hid">&copy; of ViswaKarma Woods 2000</div><div class="masthead" title="License Info"><span onclick="sw();" ><!--<img src="img/info.png"/>-->&copy;</span></div><div class="options" id="options"><span onclick="loader('http://wikimapia.org/#lang=en&lat=9.698080&lon=76.331677&z=19&m=m','map');" id="map" title="Locate us on Google Maps"><img alt="Locate us on Google Maps" src="img/map.png" class="mapimg"/></span></div></div><div class="content" id="content"><iframe style="position:absolute;width:100%; height:100%;" frameborder="0" id="contentframe" src="welcome.html"></iframe></div><div id="overlay" class="overlay" onclick="hide();"></div><div class="pic" id="pic"><img alt="Loading..." src="img/about.jpg"/></div>
 </body>
 </html>
