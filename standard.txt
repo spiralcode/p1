@@ -1,3 +1,11 @@
-products.html
+			Written by Raj Krishnan R
 
-Standard image size to be supported : 800X450px
+==products.html
+
+Standard image dimension: 800X450px
+
+==index.html
+
+#div options - Icon dimen. : 64x64px
+
+
